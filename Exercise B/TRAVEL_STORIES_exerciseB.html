@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Stories</title>
+    <link rel="stylesheet" href="stylesB.css">
+</head>
+<body>
+
+    <h1>Travel Blog</h1>
+
+    <h2>Travel Stories: Destinations and Attractions</h2>
+
+    <!-- Table with Travel Destinations and Attractions -->
+    <table>
+        <tr>
+            <th>Destination</th>
+            <th>Attraction</th>
+        </tr>
+        <tr>
+            <td>Paris, France</td>
+            <td>
+                <a href="#eiffel" onclick="showAttraction('eiffel')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Eiffel Tower">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>Rome, Italy</td>
+            <td>
+                <a href="#colosseum" onclick="showAttraction('colosseum')">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Colosseo_2020.jpg" alt="Colosseum">
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td>New York, USA</td>
+            <td>
+                <a href="#statue" onclick="showAttraction('statue')">
+                    <img src="https://www.worldatlas.com/r/w1300/upload/f4/d8/7b/shutterstock-1397031029.jpg" alt="Statue of Liberty">
+                </a>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Attraction Sections -->
+    <div id="eiffel" class="attraction-info">
+        <h2>Eiffel Tower - Paris, France</h2>
+        <p>The Eiffel Tower is one of the most iconic landmarks in the world, located in the heart of Paris. Built in 1889, it offers breathtaking panoramic views of the city.</p>
+    </div>
+
+    <div id="colosseum" class="attraction-info">
+        <h2>Colosseum - Rome, Italy</h2>
+        <p>The Colosseum is an ancient Roman amphitheater that once hosted gladiator battles and public spectacles. It is one of the most famous symbols of Ancient Rome.</p>
+    </div>
+
+    <div id="statue" class="attraction-info">
+        <h2>Statue of Liberty - New York, USA</h2>
+        <p>The Statue of Liberty is a symbol of freedom and democracy, located on Liberty Island in New York. It was a gift from France to the United States in 1886.</p>
+    </div>
+
+    <script>
+        function showAttraction(id) {
+            // Hide all attraction sections
+            let attractions = document.querySelectorAll(".attraction-info");
+            attractions.forEach(attraction => attraction.style.display = "none");
+
+            // Show the selected attraction
+            document.getElementById(id).style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
